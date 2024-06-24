@@ -40,15 +40,15 @@
 name: linting, testing, building
 on:
   push:
-    branches: [main]
+    branches: [ master ]
   pull_request:
-    branches: [main]
+    branches: [ master ]
 permissions:
   contents: write
   pages: write
   id-token: write
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 jobs:
   build-and-ui-testing:
@@ -59,7 +59,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     strategy:
       matrix:
-        node-version: [17.x]
+        node-version: [ 17.x ]
     steps:
       - uses: actions/checkout@v2
       - name: Staring Node.js ${{ matrix.node-version }}
@@ -103,7 +103,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [17.x]
+        node-version: [ 17.x ]
     steps:
       - uses: actions/checkout@v2
       - name: Staring Node.js ${{ matrix.node-version }}
@@ -117,3 +117,4 @@ jobs:
         if: always()
       - name: linting css
         run: npm run lint:scss
+
