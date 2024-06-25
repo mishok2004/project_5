@@ -170,7 +170,7 @@ Clear.args = {
 
 ----
 
-### Работа с feature-flags
+### Работа с feature-flag
 
 Разрешено использование feature flags только с помощью хелпера toggleFeatures
 
