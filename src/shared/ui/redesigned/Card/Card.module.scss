@@ -26,6 +26,10 @@
     border-radius: 40px;
 }
 
+.partial {
+    border-radius: 20px;
+}
+
 .max {
     width: 100%;
 }
@@ -45,4 +49,11 @@
 
 .gap_24 {
     padding: 24px
+}
+
+.fullHeight{
+    height: 100%;
+}
+.fullWidth{
+    width: 100%;
 }
